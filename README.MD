@@ -1,19 +1,24 @@
-Memo: PDF Semantic Accessibility Auditor
+PDF Semantic Accessibility Auditor
+
 Step 1: Project Overview
 My proposal for a web application is a tool that allows users to upload a single PDF document and receive feedback from AI in the form of an accessibility report focused on semantic structure. It checks whether the document is tagged and evaluates basic elements needed by screen readers (language, title, headings, and other detectable structure).
 A large percentage of PDFs are digitally inaccessible, making it a barrier for those who have accessibility needs to consume the document. Without proper tags and structure, screen readers cannot reliably navigate headings, lists, tables, or describe images.
+
 Step 2: Use Case & Workflow
 The primary users of this application are developers or compliance teams who remediate or consume PDFs.
 Those who are visually impaired would benefit from the final remediated document that this application can assist in producing.
+
 Present workflow: 
 	1.	A user has a PDF.
 	2.	User manually checks for HTML tags using tools such as Adobe Acrobat. 
 	3.	User notes which tags are missing. This process is prone to human error, tedious, time-consuming or deferred.
 	4.	The missing tags can then be added.
+
 AI Integrated Workflow: 
 	1.	The user uploads the PDF to the web app. 
 	2.	The app utilizes an AI model to scan the PDF to identify the tag structure information and/or analyzes if the PDF is semantically tagged.
 	3.	The app will then use an LLM to generate a plain-language report with specific recommendations on which tags are missing, how severe the missing tag is and how to resolve the missing tag. This will help in reducing the time required to perform a manual accessibility review, make accessibility review straight forward and minimize human error.
+
 Step 3: AI Features to Be Implemented
 	•	Prompt engineering: A carefully designed system prompt will instruct the model to act as a PDF accessibility specialist, only analyze from the extracted data, avoid inventing tags that were not detected, and produce prioritized, practical recommendations. This is essential for consistent output. A framework I plan on utilizing is the PROMPT (Persona, Requirements, Organization, Medium, Purpose, Tone) framework.
 	⁃	Persona: A PDF Digital Accessibility Specialist 
